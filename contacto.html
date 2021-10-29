@@ -22,9 +22,10 @@
     <!--BOOTSTRAP-->
     <!-- Latest compiled and minified CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS -->
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -51,24 +52,29 @@
         </section>
 
         <section class="container-sm mt-3 mb-3">
-            <form action="">
+            <form id="form_contacto" onsubmit="return false">
                 <div class="mb-3 mt-3">
                     <label for="name">Nombre:</label>
                     <input type="name" class="form-control" id="name" placeholder="Ingresar nombre" name="name">
+                    <span class="red" id="error_nombre"></span>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="surname">Apellido:</label>
-                    <input type="surname" class="form-control" id="surname" placeholder="Ingresar apellido" name="surname">
+                    <input type="surname" class="form-control" id="surname" placeholder="Ingresar apellido"
+                        name="surname">
+                    <span class="red" id="error_apellido"></span>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ingresar email" name="email">
+                    <input class="form-control" id="email" placeholder="Ingresar email" name="email">
+                    <span class="red" id="error_email"></span>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="comment">Mensaje:</label>
                     <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+                    <span class="red" id="error_mensaje"></span>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
             </form>
         </section>
     </main>

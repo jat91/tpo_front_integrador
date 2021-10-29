@@ -8,6 +8,11 @@ body {
     background-image: url("../img/fondo.png");
 }
 
+.red {
+    color: red;
+}
+
+
 /*MENU*/
 #menu {
     width: 100%;
