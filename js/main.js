@@ -2,7 +2,7 @@
 window.addEventListener('load', function () {
 
     let regExEmail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-    let regMensaje = /brasil, Brasil, BRASIL/;
+    let regMensaje = /BRASIL|brasil|Brasil/;
 
     let formulario = document.getElementById('form_contacto');
 
@@ -55,8 +55,8 @@ window.addEventListener('load', function () {
             mensaje.focus();
             return false;
         } 
-        /*valido que no contenga la palabra brasil*/
-        else if (!regMensaje.test(mensaje.value)) {
+        /*valido que no contenga la palabra BRASIL*/
+        else if (regMensaje.test(mensaje.value)) {
             document.querySelector("#error_mensaje").innerHTML = "No se puede nombrar al país vecino";
             document.querySelector("#error_mensaje").style.display = "block";
             mensaje.focus();
